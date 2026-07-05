@@ -39,6 +39,10 @@ You'll get a scored lead list, a personalized sequence per lead, and a CSV ready
 
 Every message is built on a **real signal** about the person or company — recent funding, a job posting, a product launch, a post they wrote, a tech-stack clue — never a fabricated compliment. The skills refuse to invent people, emails, or personal facts, and flag anything unverified before you send.
 
+## Chrome Extension (real data)
+
+The skills know *how* to write great outreach; the **[Outreach Assistant Chrome extension](extension/)** gives them the *actual* signals. Capture the LinkedIn / company / Instagram / X page you're viewing, generate a personalized email or DM with Claude, and drop it into your compose box. Manifest V3, loads unpacked, uses your own Anthropic API key. See [`extension/README.md`](extension/README.md).
+
 ## Responsible Outreach
 
 These skills **draft** campaigns; you review and send. They follow cold-outreach etiquette and remind you of the rules that apply to you (CAN-SPAM, GDPR/PECR, CASL): accurate sender info, a real reason for contact, easy opt-out, verified emails, and honoring unsubscribe/DNC requests. Quality over volume — a handful of genuinely personalized messages beats a mass blast.

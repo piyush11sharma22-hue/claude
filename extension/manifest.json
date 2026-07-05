@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "AI Sales Team — Outreach Assistant",
+  "version": "1.0.0",
+  "description": "Capture the person/company you're viewing and generate a hyper-personalized email or DM, then drop it into your compose box.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://api.anthropic.com/*"],
+  "action": {
+    "default_title": "AI Sales Team — Outreach Assistant",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html",
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  }
+}

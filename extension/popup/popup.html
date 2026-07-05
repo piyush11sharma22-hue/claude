@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Outreach Assistant</h1>
+      <a id="openOptions" href="#" title="Settings">⚙︎</a>
+    </header>
+
+    <section class="step">
+      <button id="capture" class="primary">1 · Capture this page</button>
+      <div id="captured" class="captured hidden"></div>
+    </section>
+
+    <section class="step">
+      <label>Your offer / who you are
+        <textarea id="offer" rows="3" placeholder="e.g. I build AI automations for DTC brands — cut support tickets 40%. Proof: did this for a $2M/yr skincare brand."></textarea>
+      </label>
+
+      <div class="row">
+        <label>Channel
+          <select id="channel">
+            <option value="email">Email</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="instagram">Instagram DM</option>
+            <option value="x">X DM</option>
+          </select>
+        </label>
+        <label>Goal
+          <input id="goal" type="text" placeholder="book a 15-min call" />
+        </label>
+      </div>
+
+      <label>Sign off as
+        <input id="sender" type="text" placeholder="Your name" />
+      </label>
+
+      <button id="generate" class="primary" disabled>2 · Generate message</button>
+    </section>
+
+    <section id="resultWrap" class="step hidden">
+      <label>Result
+        <textarea id="result" rows="10"></textarea>
+      </label>
+      <div class="row">
+        <button id="copy">Copy</button>
+        <button id="insert">Insert into compose box</button>
+      </div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

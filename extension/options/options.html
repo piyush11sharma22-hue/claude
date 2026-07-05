@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 520px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; }
+      h1 { font-size: 18px; }
+      label { display: block; margin: 16px 0 4px; font-weight: 600; }
+      input, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; font: inherit; }
+      button { margin-top: 18px; padding: 9px 16px; border: none; border-radius: 6px; background: #c65d3b; color: #fff; font-weight: 600; cursor: pointer; }
+      .hint { color: #6b6b6b; font-size: 12px; margin-top: 4px; }
+      .ok { color: #1a7f37; margin-left: 10px; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1c1c1e; color: #f2f2f2; }
+        input, select { background: #2a2a2c; color: #f2f2f2; border-color: #3a3a3c; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Outreach Assistant — Settings</h1>
+
+    <label for="apiKey">Anthropic API key</label>
+    <input id="apiKey" type="password" placeholder="sk-ant-..." autocomplete="off" />
+    <div class="hint">
+      Stored only in this browser's extension storage (<code>chrome.storage.local</code>), sent only to
+      api.anthropic.com. Get a key at console.anthropic.com.
+    </div>
+
+    <label for="model">Model</label>
+    <select id="model">
+      <option value="claude-opus-4-8">Claude Opus 4.8 — best quality (default)</option>
+      <option value="claude-sonnet-5">Claude Sonnet 5 — faster / cheaper</option>
+      <option value="claude-haiku-4-5">Claude Haiku 4.5 — cheapest</option>
+    </select>
+
+    <div>
+      <button id="save">Save</button>
+      <span id="saved" class="ok"></span>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
